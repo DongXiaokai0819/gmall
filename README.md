@@ -1,27 +1,60 @@
-# gmall0105
+# 分布式简易商城实战项目
+----
+## 项目介绍
+> 功能点：
+    分布式商城，简易的购物流程、简易后端运营平台。
+技术点：
+       核心技术为Spring Boot + Dubbo实现。
 
-## 各个模块端口号
+## 平台目录结构说明
 
-gmall-user-service 端口号8070
-gmall-user-web 端口号8080
+├─gmall-parent----------------------------父项目，公共依赖
+│  │
+│  ├─服务提供者
+│  │  │
+│  │  ├─gmall-user-service----------------------------用户管理service服务
+│  │  │
+│  │  ├─gmall-manage-service----------------------------后台管理service服务
+│  │  │
+│  │  ├─gmall-search-service----------------------------搜索service服务
+│  │  │
+│  │  ├─gmall-cart-service----------------------------购物车service服务
+│  │  │
+│  │  ├─gmall-order-service----------------------------订单管理service服务
+│  │  │
+│  │  ├─gmall-cart-service----------------------------购物车service服务
+│  ├─服务消费方
+│  │  │
+│  │  ├─gmall-user-web----------------------------用户管理web服务
+│  │  │
+│  │  ├─gmall-manage-web----------------------------后台管理web服务
+│  │  │
+│  │  ├─gmall-search-web----------------------------搜索web服务
+│  │  │
+│  │  ├─gmall-order-web----------------------------订单管理web服务
+│  │  │
+│  │  ├─gmall-cart-web----------------------------购物车web服务
+│  │  │
+│  │  ├─gmall-item-web----------------------------商品服务
+│  │  │
+│  │  ├─gmall-payment ----------------------------支付服务
+│  │  │
+│  │  ├─gmall-passport-web----------------------------权限管理服务
+│  │  │
+│  │  ├─gmall-seckill----------------------------秒杀服务
+│  │  │
+│  │  ├─gware-manage----------------------------库存服务
+│  │
+│  ├─gmall-api--------------------------公共核心依赖包
+│  │
+│  ├─gmall-common-util--------------------------公共工具包
+│  │
+│  ├─gmall-service-util--------------------------服务提供者工具包
+│  │
+│  ├─gmall-web-util--------------------------服务消费者依赖包
+
+## 特殊说明
+
+> 本商城来源自尚硅谷gmall商城，在此感谢尚硅谷，侵删，http://www.atguigu.com 。
 
 
-gmall-manage-service 端口号8071
-gmall-manage-web 端口号8081
-
-gmall-item-service 端口号8072//其实item不需要service服务，spu与sku的东西都在manage-service内
-gmall-item-web 端口号8082
-
-gmall-search-service 搜索服务后台 端口号8073
-gmall-search-web 搜索服务前台 端口号8083
-
-gmall-cart-service 购物车服务后台 端口号8074
-gmall-cart-web 购物车服务前台 端口号8084
-
-gmall-user-service 端口号8070
-gmall-passport-web 端口号8085
-
-gmall-order-service 端口号8076
-gmall-order-web 端口号8086
-
-gmall-payment 端口号8087
